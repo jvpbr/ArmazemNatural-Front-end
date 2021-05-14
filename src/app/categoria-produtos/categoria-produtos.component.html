@@ -7,7 +7,6 @@
 
 
   <div *ngFor='let cat of listaCategoria' class="row mt-5">
-
     <div *ngFor='let prod of cat.produto' class="col-md-3 ">
       <div class="card-deck ">
         <div class="card p-3 text-center cardBorderCorners" id="cardBack">
@@ -16,66 +15,13 @@
             <h5 class="card-title">{{prod.nome}}</h5>
             <p class="card-text">R{{prod.preco | currency}}</p>
             <div class="row justify-content-center">
-              <button class="mr-2 btn">Carrinho</button>
-              <button class="btn">Comprar</button>
+              <button (click)='carrinho()' class="mr-2 btn">Carrinho</button>
+              <button (click)='comprar()' class="btn">Comprar</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="container">
-    <div class="header">
-      <img class="logo" src="https://s5.postimg.cc/wy79025cz/nike_Logo_White.png" alt="" />
-      <div class="title">
-        <h2>
-          HARTBEESPOORT
-        </h2>
-        Support and Nike Zoom Air come together for a more supportive feel with high-speed responsiveness
-      </div>
-      <span class="back-text">
-        FAS
-      </span>
-      <img class="shoe" src="https://s5.postimg.cc/j9r8yf9gn/sws1.png" alt="" />
-    </div>
-    <div class="body">
-      <span class="title">
-        HARTBEE<b>SPOORT</b>
-        <span class="badge">NEW</span>
-      </span>
-      <span class="caption">Basket Ball Collection</span>
-      <div class="rating">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star gray"></i>
-      </div>
-      <div class="sizes">
-        <span class="title">Size</span>
-        <ul>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li class="active">10</li>
-          <li>11</li>
-        </ul>
-      </div>
-      <div class="colors">
-        <span class="title">Colour</span>
-        <ul>
-          <li class="orange active"></li>
-          <li class="green"></li>
-          <li class="yellow"></li>
-        </ul>
-      </div>
-      <div class="price">
-          USD <b>23,453</b>
-      </div>
-    </div>
-  </div>
-
-
 
 </div>

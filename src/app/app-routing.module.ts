@@ -14,6 +14,8 @@ import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.compon
 import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delete.component';
 import { CategoriaProdutosComponent } from './categoria-produtos/categoria-produtos.component';
 import { FornecedorComponent } from './fornecedor/fornecedor.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import { TodosProdutosComponent } from './todos-produtos/todos-produtos.component';
 
 const routes: Routes = [
   
@@ -23,6 +25,7 @@ const routes: Routes = [
 
   {path: 'entrar', component: EntrarComponent},
   {path: 'cadastrar', component: CadastrarComponent},
+  {path: 'user-edit/:id', component: UserEditComponent},
 
   {path: 'blog', component: BlogComponent},
   {path: 'armazem', component: ArmazemComponent},
@@ -35,10 +38,10 @@ const routes: Routes = [
 
   {path: 'categoria-produtos/:nome', component: CategoriaProdutosComponent},
 
-
   {path: 'produtos', component: ProdutosComponent},
   {path: 'produtos-delete/:id', component: ProdutosDeleteComponent},
-  {path: 'produtos-edit/:id', component: ProdutosEditComponent}
+  {path: 'produtos-edit/:id', component: ProdutosEditComponent},
+  {path: 'todos-produtos', component: TodosProdutosComponent}
 
 ];
 

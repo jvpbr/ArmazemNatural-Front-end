@@ -13,6 +13,8 @@ export class CategoriaEditComponent implements OnInit {
 
   categoria: Categoria = new Categoria
 
+  token = localStorage.getItem('token')
+
   constructor(
     private categoriaService: CategoriaService,
     private router: Router,
@@ -21,6 +23,11 @@ export class CategoriaEditComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    if(this.token == null){
+      this.router.navigate(['/entrar'])
+    }
+
     let id = this.route.snapshot.params['id']
     this.findByIdCategoria(id)
   }

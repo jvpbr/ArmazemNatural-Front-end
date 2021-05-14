@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Categoria } from '../model/Categoria';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 
 @Component({
@@ -15,7 +16,8 @@ export class CategoriaProdutosComponent implements OnInit {
 
   constructor(
     private categoriaService: CategoriaService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit(){
@@ -27,6 +29,14 @@ export class CategoriaProdutosComponent implements OnInit {
     this.categoriaService.getByCategoriaProdutos(nome).subscribe((resp: Categoria[])=>{
       this.listaCategoria = resp
     })
+  }
+
+  comprar(){
+    this.alertas.showAlertSuccess("Compra realizada!")
+  }
+
+  carrinho(){
+    this.alertas.showAlertSuccess("Produto adicionado ao carrinho!")
   }
 
 }

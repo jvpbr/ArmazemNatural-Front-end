@@ -14,6 +14,8 @@ export class CategoriaDeleteComponent implements OnInit {
   categoria: Categoria = new Categoria()
   idCategoria: number
 
+  token = localStorage.getItem('token')
+
   constructor(
     private categoriaService: CategoriaService,
     private router: Router,
@@ -22,6 +24,10 @@ export class CategoriaDeleteComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    if(this.token == null){
+      this.router.navigate(['/entrar'])
+    }
     this.idCategoria = this.route.snapshot.params["id"]
     this.findByIdCategoria(this.idCategoria)
   }

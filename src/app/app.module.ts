@@ -23,6 +23,8 @@ import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.compon
 import { AlertasComponent } from './alertas/alertas.component';
 import { CategoriaProdutosComponent } from './categoria-produtos/categoria-produtos.component';
 import { FornecedorComponent } from './fornecedor/fornecedor.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import { TodosProdutosComponent } from './todos-produtos/todos-produtos.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { FornecedorComponent } from './fornecedor/fornecedor.component';
     ProdutosEditComponent,
     AlertasComponent,
     CategoriaProdutosComponent,
-    FornecedorComponent
+    FornecedorComponent,
+    UserEditComponent,
+    TodosProdutosComponent
   ],
   imports: [
     BrowserModule,

@@ -22,6 +22,13 @@ export class EntrarComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0,0)
+
+    document.addEventListener('keypress', (e)=>{
+      if(e.which == 13){
+        this.entrar()
+      }
+   }, false);
+
   }
 
   entrar(){

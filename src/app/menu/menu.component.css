@@ -47,6 +47,11 @@ input[type=search]:focus {
   width: 40px;
 }
 
+.navbar
+{
+  font-size: 18px;
+}
+
 html,
 body {
     overflow-x: hidden;
@@ -87,3 +92,7 @@ body {
         padding: 10px;
         text-align: center;
     }
+
+a{
+  cursor: pointer;
+}

@@ -10,11 +10,11 @@
                 </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input [(ngModel)]='userLogin.email' type="text" name="email" class="form-control" placeholder="Informe seu email">
+                        <input [(ngModel)]='userLogin.email' required type="text" name="email" class="form-control" placeholder="Informe seu email">
                     </div>
                     <div class="form-group">
                         <label for="senha">Senha</label>
-                        <input [(ngModel)]='userLogin.senha' type="password" name="senha" class="form-control" placeholder="Informe sua senha">
+                        <input [(ngModel)]='userLogin.senha' required type="password" name="senha" class="form-control" placeholder="Informe sua senha">
                     </div>
                     <div class="form-group">
                         <p class="text-center">Não tem uma conta? <a routerLink='/cadastrar'>Cadastre-se</a></p>

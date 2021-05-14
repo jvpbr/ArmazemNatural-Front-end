@@ -21,10 +21,6 @@ h3 {
     text-shadow: 1px 1px 1px black;
 }
 
-h3 span { 
-    background-color:#11111142;
-    box-shadow: 4px 5px 6px 1px rgb(0 0 0 / 54%);
-}
 
 h1{
     text-shadow: 1px 1px 1px black;
@@ -70,10 +66,16 @@ button:hover {
 
 #cardBack2{
     border: 2px solid #53744E;
-    box-shadow: 4px 5px 6px 1px rgb(0 0 0 / 54%);
+    /* box-shadow: 4px 5px 6px 1px rgb(0 0 0 / 54%); */
 }
 
 .wrapper {
     text-align: center;
+}
+
+
+.cardBorderCorners {
+  border-radius: 25px 25px;
+  width: 18rem;
 }
 

@@ -26,11 +26,16 @@ export class AuthService {
   cadastrar(usuario: Usuario): Observable<Usuario>{
     return this.http.post<Usuario>(`${this.server}/usuarios/cadastrar`, usuario)
   }
+
+  getByIdUser(id: number): Observable<Usuario>{
+    return this.http.get<Usuario>(`${this.server}/usuarios/${id}`)
+  }
   
   logado(){
     let ok: boolean = false
+    let token = localStorage.getItem('token')
     
-    if(this.token != null){
+    if(token != null){
       ok = true;
     }
     return ok

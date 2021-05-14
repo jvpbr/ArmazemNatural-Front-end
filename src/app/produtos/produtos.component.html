@@ -108,7 +108,7 @@
             <tr *ngFor='let item of listaProdutos'>
               <th>{{item.id}}</th>
               <td>{{item.nome}}</td>
-              <td>{{item.categoria}}</td>
+              <td>{{item.categoria.nome}}</td>
               <td>R{{item.preco | currency}}</td>
               <td class="d-flex justify-content-end">
                 <button class="btn btn-info mr-3" [routerLink]="['/produtos-edit', item.id]">Editar</button>

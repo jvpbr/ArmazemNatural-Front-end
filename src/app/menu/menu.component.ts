@@ -16,6 +16,8 @@ export class MenuComponent implements OnInit {
 
   listaCategorias: Categoria[]
 
+  id = environment.id
+
 
 
   constructor(

@@ -21,7 +21,7 @@
                             <a *ngFor='let cat of listaCategorias' class="dropdown-item" [routerLink]="['/categoria-produtos', cat.nome]">{{cat.nome}}</a>
                           
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" >Todos os Produtos</a>
+                            <a [routerLink]="['/todos-produtos']" class="dropdown-item" >Todos os Produtos</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -37,26 +37,29 @@
                         <a class="nav-link  m-0" routerLink="/fornecedor">Seja um Fornecedor</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
+                <!-- <form class="form-inline my-2 my-lg-0">
                     <div class="input-icons">
                         <i class="fas fa-search" id="search"></i>
                         <input class="form-control mr-sm-2 input-field" type="search" placeholder="Pesquisar"
                             aria-label="Pesquisar">
                     </div>
-                </form>
+                </form> -->
                 <ul class="navbar-nav ml-auto d-flex align-items-center">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle m-0" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-user-circle fa-lg"></i> Login
+                            <i class="fas fa-user-circle fa-lg mr-3"></i> 
+                            <span *ngIf='authService.logado() == false'>Login</span>
+                            <span *ngIf='authService.logado()'>{{nome}}</span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a *ngIf='authService.adm()' class="dropdown-item" routerLink="/categoria">Cadastrar Categoria</a>
-                            <a *ngIf='authService.adm()' class="dropdown-item" routerLink="/produtos">Cadastrar Produto</a>
+                          <a *ngIf='authService.logado()' class="dropdown-item" [routerLink]="['/user-edit', id]">Editar Perfil</a>
+                            <a *ngIf='authService.adm() && authService.logado()' class="dropdown-item" routerLink="/categoria">Cadastrar Categoria</a>
+                            <a *ngIf='authService.adm() && authService.logado()' class="dropdown-item" routerLink="/produtos">Cadastrar Produto</a>
                              <a *ngIf='authService.logado() == false' class="dropdown-item" routerLink="/entrar">Faça o login</a>
                             <a *ngIf='authService.logado() == false' class="dropdown-item" routerLink="/cadastrar">Cadastre-se</a>
                             <div class="dropdown-divider"></div>
-                            <a *ngIf='authService.logado()' class="dropdown-item" href="#">Sair</a>
+                            <a *ngIf='authService.logado()' class="dropdown-item" (click)="sair()">Sair</a>
                         </div>
                     </li>
                     <li class="nav-item pl-3">

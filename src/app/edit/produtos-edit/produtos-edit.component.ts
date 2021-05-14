@@ -27,48 +27,48 @@ export class ProdutosEditComponent implements OnInit {
     private route: ActivatedRoute,
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
-    private alertas: AlertasService 
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
 
-    if(this.token == ''){
+    if (this.token == null) {
       this.router.navigate(['/entrar'])
+    } else {
+      let id = this.route.snapshot.params['id']
+      this.findByIdProduto(id)
+      this.findAllCategorias()
     }
-
-    let id = this.route.snapshot.params['id']
-    this.findByIdProduto(id)
-    this.findAllCategorias()
   }
 
-  findByIdProduto(id: number){
-    this.produtoService.getByIdProdutos(id).subscribe((resp: Produto)=>{
+  findByIdProduto(id: number) {
+    this.produtoService.getByIdProdutos(id).subscribe((resp: Produto) => {
       this.produto = resp
     })
   }
 
-  findByIdCategoria(){
-    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria)=>{
+  findByIdCategoria() {
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
       this.categoria = resp
     })
   }
 
-  findAllCategorias(){
-    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
+  findAllCategorias() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategorias = resp
     })
   }
 
-  atualizar(){
+  atualizar() {
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
 
-    this.produtoService.putProdutos(this.produto).subscribe((resp: Produto)=>{
+    this.produtoService.putProdutos(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
       this.alertas.showAlertSuccess('Produto atualizado com sucesso!')
       this.router.navigate(['/produtos'])
-      
+
     })
   }
 

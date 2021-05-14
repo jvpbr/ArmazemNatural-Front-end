@@ -28,7 +28,7 @@ export class ProdutosDeleteComponent implements OnInit {
 
     window.scroll(0,0)
 
-    if(this.token == ''){
+    if(this.token == null){
       this.router.navigate(['/entrar'])
     }
 
