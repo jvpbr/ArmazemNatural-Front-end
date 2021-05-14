@@ -35,7 +35,7 @@ export class EntrarComponent implements OnInit {
 
       localStorage.setItem('token', this.userLogin.token)
 
-      this.router.navigate(['/inicio'])
+      this.router.navigate(['/home'])
 
     }, erro => {
       if(erro.status == 500){

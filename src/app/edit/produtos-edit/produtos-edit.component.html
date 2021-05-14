@@ -9,7 +9,7 @@
   <div class="row d-flex justify-content-center">
     <div class="col-md-6">
       <div class="form-group">
-        <label for="nome">Produto</label>
+        <h4>Nome</h4>
         <input type="text" class="form-control" id="nome" [(ngModel)]='produto.nome'>
       </div>
     </div>
@@ -17,21 +17,62 @@
   <div class="row d-flex justify-content-center">
     <div class="col-md-6">
       <div class="form-group">
-        <label for="nome">Imagem</label>
-        <input type="text" class="form-control" id="nome" [(ngModel)]='produto.imagem'>
+        <h4>Descrição</h4>
+        <input type="text" class="form-control" id="descricao" [(ngModel)]='produto.descricao'>
       </div>
     </div>
   </div>
+
   <div class="row d-flex justify-content-center">
     <div class="col-md-6">
       <div class="form-group">
-        <label for="nome">Preço</label>
-        <input type="text" class="form-control" id="nome" [(ngModel)]='produto.preco'>
+        <h4>Marca</h4>
+        <input type="text" class="form-control" id="marca" [(ngModel)]='produto.marca'>
       </div>
     </div>
   </div>
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-6">
+      <div class="form-group">
+        <h4>Quantidade</h4>
+        <input type="text" class="form-control" id="qtdEstoque" [(ngModel)]='produto.qtdEstoque'>
+      </div>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-6">
+      <div class="form-group">
+        <h4>Peso em gramas</h4>
+        <input type="text" class="form-control" id="peso" [(ngModel)]='produto.peso'>
+      </div>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-6">
+      <div class="form-group">
+        <h4>Preço</h4>
+        <input type="text" class="form-control" id="preco" [(ngModel)]='produto.preco'>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-6">
+      <div class="form-group">
+        <h4>Imagem</h4>
+        <input type="text" class="form-control" id="imagem" [(ngModel)]='produto.imagem'>
+      </div>
+    </div>
+  </div>
+  
   <div class="row d-flex justify-content-center mt-2 mb-5">
     <div class="col-md-6">
+      <h4>Categoria</h4>
       <label for="tema">Escolha uma categoria ou <a routerLink='/categoria' data-dismiss="modal">cadastre uma
           nova</a>:
       </label>

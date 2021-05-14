@@ -12,3 +12,9 @@ platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 
 
+  window.addEventListener('beforeunload', function(event) {
+    localStorage.removeItem('token');
+  
+  }, false);
+
+

@@ -10,7 +10,6 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
-import { InicioComponent } from './inicio/inicio.component';
 import { HomeComponent } from './home/home.component';
 import { ContatoComponent } from './contato/contato.component';
 import { BlogComponent } from './blog/blog.component';
@@ -23,6 +22,7 @@ import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delet
 import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { CategoriaProdutosComponent } from './categoria-produtos/categoria-produtos.component';
+import { FornecedorComponent } from './fornecedor/fornecedor.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,6 @@ import { CategoriaProdutosComponent } from './categoria-produtos/categoria-produ
     RodapeComponent,
     EntrarComponent,
     CadastrarComponent,
-    InicioComponent,
     HomeComponent,
     ContatoComponent,
     BlogComponent,
@@ -43,7 +42,8 @@ import { CategoriaProdutosComponent } from './categoria-produtos/categoria-produ
     ProdutosDeleteComponent,
     ProdutosEditComponent,
     AlertasComponent,
-    CategoriaProdutosComponent
+    CategoriaProdutosComponent,
+    FornecedorComponent
   ],
   imports: [
     BrowserModule,
