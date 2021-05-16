@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class TodosProdutosComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -28,6 +30,15 @@ export class TodosProdutosComponent implements OnInit {
     this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
       this.listaProdutos = resp
     })
+  }
+
+  comprar(){
+    this.router.navigate(['/page-produto'])
+   /*  this.alertas.showAlertSuccess("Compra realizada!") */
+  }
+
+  carrinho(){
+    this.alertas.showAlertSuccess("Produto adicionado ao carrinho!")
   }
 
 }

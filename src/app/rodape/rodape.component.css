@@ -2,21 +2,6 @@
     background: #53744E;
 }
 
-#info1 {
-    color: white;
-    display: inline-block;
-}
-
-#icon {
+.icon {
     color: #F88240;
-}
-
-#info2 {
-    color: white;
-    display: inline-block;
-}
-
-#info3 {
-    color: white;
-    display: inline-block;
 }

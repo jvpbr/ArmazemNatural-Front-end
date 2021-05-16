@@ -25,6 +25,7 @@ import { CategoriaProdutosComponent } from './categoria-produtos/categoria-produ
 import { FornecedorComponent } from './fornecedor/fornecedor.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { TodosProdutosComponent } from './todos-produtos/todos-produtos.component';
+import { PageProdutoComponent } from './page-produto/page-produto.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { TodosProdutosComponent } from './todos-produtos/todos-produtos.componen
     CategoriaProdutosComponent,
     FornecedorComponent,
     UserEditComponent,
-    TodosProdutosComponent
+    TodosProdutosComponent,
+    PageProdutoComponent
   ],
   imports: [
     BrowserModule,

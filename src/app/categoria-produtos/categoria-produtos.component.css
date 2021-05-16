@@ -30,3 +30,9 @@ button{
   border-radius: 25px 25px;
   width: 18rem;
 }
+
+button:focus, 
+button:hover {
+    color: #F88240;
+    font-weight: bold;
+    }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
 import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
@@ -17,7 +17,8 @@ export class CategoriaProdutosComponent implements OnInit {
   constructor(
     private categoriaService: CategoriaService,
     private route: ActivatedRoute,
-    private alertas: AlertasService
+    private alertas: AlertasService,
+    private router: Router
   ) { }
 
   ngOnInit(){
@@ -32,7 +33,8 @@ export class CategoriaProdutosComponent implements OnInit {
   }
 
   comprar(){
-    this.alertas.showAlertSuccess("Compra realizada!")
+    /* this.alertas.showAlertSuccess("Compra realizada!") */
+    this.router.navigate(['/page-produto'])
   }
 
   carrinho(){

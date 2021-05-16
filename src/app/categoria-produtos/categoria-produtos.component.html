@@ -16,7 +16,7 @@
             <p class="card-text">R{{prod.preco | currency}}</p>
             <div class="row justify-content-center">
               <button (click)='carrinho()' class="mr-2 btn">Carrinho</button>
-              <button (click)='comprar()' class="btn">Comprar</button>
+              <button [routerLink]="['/page-produto', prod.id]" class="btn">Comprar</button>
             </div>
           </div>
         </div>

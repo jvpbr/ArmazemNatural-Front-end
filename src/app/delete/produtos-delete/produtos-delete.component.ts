@@ -45,7 +45,7 @@ export class ProdutosDeleteComponent implements OnInit {
   apagar(){
     this.produtoService.deleteProdutos(this.idProduto).subscribe(()=>{
       this.alertas.showAlertSuccess("Produto apagado com sucesso!")
-      this.router.navigate(['/home'])
+      this.router.navigate(['/produtos'])
     })
   }
 

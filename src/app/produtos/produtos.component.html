@@ -41,7 +41,8 @@
         <div class="row d-flex justify-content-center mt-2">
           <div class="col-md-3">
             <h4>Peso em gramas</h4>
-            <input [(ngModel)]='produto.peso' type="text" class="form-control" id="peso" placeholder="Digite o peso em gramas">
+            <input [(ngModel)]='produto.peso' type="text" class="form-control" id="peso"
+              placeholder="Digite o peso em gramas">
           </div>
         </div>
 
@@ -75,8 +76,8 @@
       </div>
 
       <div class="d-flex justify-content-center mb-4">
-        <button class="btn btn-success mr-4" (click)='cadastrarProduto()'>Cadastrar</button>
-        <button class="btn btn-danger" routerLink="/home">Cancelar</button>
+        <button class="btn btn-danger mr-4" routerLink="/home">Cancelar</button>
+        <button class="btn btn-success" (click)='cadastrarProduto()'>Cadastrar</button>
       </div>
     </div>
   </div>
@@ -111,8 +112,8 @@
               <td>{{item.categoria.nome}}</td>
               <td>R{{item.preco | currency}}</td>
               <td class="d-flex justify-content-end">
-                <button class="btn btn-info mr-3" [routerLink]="['/produtos-edit', item.id]">Editar</button>
-                <button class="btn btn-danger" [routerLink]="['/produtos-delete', item.id]">Apagar</button>
+                <button class="btn btn-danger mr-3" [routerLink]="['/produtos-delete', item.id]">Apagar</button>
+                <button class="btn btn-info" [routerLink]="['/produtos-edit', item.id]">Editar</button>
               </td>
             </tr>
           </tbody>

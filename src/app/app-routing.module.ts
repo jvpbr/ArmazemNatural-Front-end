@@ -16,6 +16,7 @@ import { CategoriaProdutosComponent } from './categoria-produtos/categoria-produ
 import { FornecedorComponent } from './fornecedor/fornecedor.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { TodosProdutosComponent } from './todos-produtos/todos-produtos.component';
+import { PageProdutoComponent } from './page-produto/page-produto.component';
 
 const routes: Routes = [
   
@@ -41,7 +42,8 @@ const routes: Routes = [
   {path: 'produtos', component: ProdutosComponent},
   {path: 'produtos-delete/:id', component: ProdutosDeleteComponent},
   {path: 'produtos-edit/:id', component: ProdutosEditComponent},
-  {path: 'todos-produtos', component: TodosProdutosComponent}
+  {path: 'todos-produtos', component: TodosProdutosComponent},
+  {path: 'page-produto/:id', component: PageProdutoComponent}
 
 ];
 
